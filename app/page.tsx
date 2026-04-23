@@ -1,6 +1,7 @@
 "use client";
 
 import SearchDirectory, { SearchableEntry } from "./components/searchDirectory";
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -21,6 +22,22 @@ export default function Home() {
             entries={[] as SearchableEntry[]}
           />
         </div>
+
+         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <Link
+            href="/animations"
+            className="inline-block bg-orange-600/72 p-2  shadow-lg border-none rounded-lg backdrop-blur-sm text-sm font-medium transition hover:text-blue/80"
+          >
+            All Animations
+          </Link>
+             <Link
+            href="/"
+            className="inline-block bg-orange-600/72 p-2  shadow-lg border-none rounded-lg backdrop-blur-sm text-sm font-medium transition hover:text-blue/80"
+          >
+            All Games
+          </Link>
+         </div>
+
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-col">
       <p>Created by Rachael Kelm-Southworth</p>
       <p>email <strong className="text-semibold text-orange-500">rkelmsouthworth@gmail.com</strong> for use and more ideas</p>
