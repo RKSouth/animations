@@ -31,7 +31,7 @@ export default function Home() {
             All Animations
           </Link>
              <Link
-            href="/"
+            href="/games"
             className="inline-block bg-orange-600/72 p-2  shadow-lg border-none rounded-lg backdrop-blur-sm text-sm font-medium transition hover:text-blue/80"
           >
             All Games
