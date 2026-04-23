@@ -30,7 +30,7 @@ export default function AllAnimations() {
 
          <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <Link
-            href="/animations/fallingballs"
+            href="/animations/fallingpages"
             className="inline-block bg-orange-600/72 p-2  shadow-lg border-none rounded-lg backdrop-blur-sm text-sm font-medium transition hover:text-blue/80"
           >
             Falling Balls

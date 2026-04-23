@@ -76,12 +76,12 @@ export default function FallingBalls({
   const isFinished = phase === "finished";
 
   return (
-    <div className="min-h-screen bg-white px-6 py-12">
+    <div className="min-h-screen px-6 py-12">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6">
         <div className="flex items-center justify-between">
           <Link
             href="/animations"
-            className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-800 transition hover:bg-zinc-100"
+            className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-100"
           >
             ← Back to Animations
           </Link>
@@ -89,7 +89,7 @@ export default function FallingBalls({
           <button
             type="button"
             onClick={startAnimation}
-            className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-800 transition hover:bg-zinc-100"
+            className="rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-100"
           >
             {isIdle ? "Start" : "Replay"}
           </button>
@@ -100,10 +100,10 @@ export default function FallingBalls({
             {isIdle && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 sm:text-6xl">
-                    Falling Balls
+                  <h1 className="text-4xl font-semibold tracking-tight text-zinc-100 sm:text-6xl">
+                    Falling
                   </h1>
-                  <p className="mt-4 text-base text-zinc-500 sm:text-lg">
+                  <p className="mt-4 text-base text-zinc-100 sm:text-lg">
                     Random, spinning, growing, shrinking
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export default function FallingBalls({
                 {balls.map((ball, ballIndex) => (
                   <motion.div
                     key={`${runKey}-${ball.id}`}
-                    className="absolute bg-zinc-900"
+                    className="absolute bg-amber-100"
                     style={{
                       left: `${ball.leftPercent}%`,
                       top: 0,
@@ -150,14 +150,14 @@ export default function FallingBalls({
 
         {isFinished && (
           <div className="flex flex-col items-center gap-4 pt-2">
-            <h1 className="text-4xl font-semibold tracking-tight text-zinc-900">
+            <h1 className="text-4xl font-semibold tracking-tight text-zinc-100">
               Finished
             </h1>
 
             <button
               type="button"
               onClick={startAnimation}
-              className="rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-800 transition hover:bg-zinc-100"
+              className="rounded-full border border-zinc-300 px-5 py-2.5 text-sm font-medium text-zinc-100 transition hover:bg-zinc-100"
             >
               Restart
             </button>
